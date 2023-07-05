@@ -1,0 +1,252 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0E0D0D;
+}
+
+/* TODAS LAS MODIFICACIONES SOBRE INDEX.HTML*/
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    gap:1.5rem;
+}
+
+
+
+main{
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 30%);
+    gap: 2rem;
+    margin: 3rem 2rem 3rem 2rem;
+}
+
+main .img-dos, .img-cinco{
+    display: none;
+}
+
+main div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+}
+
+
+
+
+footer p{
+    margin-top: 3rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+
+@media screen and (min-width:600px) {
+   main{
+       grid-template-columns: repeat(2, 1fr) ;
+      grid-template-rows: repeat(2, 50%);
+   }
+
+   main .img-cuatro{
+       grid-column: span 2;
+   }
+}
+
+
+
+@media screen and (min-width:1024px) {
+    main .img-dos, .img-cinco{
+        display: block;
+    }
+    
+    main{
+        grid-template-columns: repeat(3, 1fr) ;
+        gap: 1rem;
+        grid-template-rows: 40% 40% 20%;
+    }
+
+    main .img-uno, .img-tres{
+        grid-row: span 2;
+    }
+
+    main .img-dos, main .img-cuatro{
+        grid-column: span 1;
+    }
+
+    main .img-cinco{
+        grid-column: span 3;
+    }
+}
+
+h1{
+    color: whitesmoke;
+    text-align: center;}
+
+   
+
+
+
+/* TODAS LAS MODIFICACIONES SOBRE OFERTAS.HTML*/
+
+.ofertas-body header{
+    margin-bottom: auto;
+}
+
+
+.ofertas-body{
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: grey
+
+}
+
+
+
+img{
+    max-width: 100%;
+}
+
+
+
+
+ .container-items{
+    display: grid;
+    grid-template-columns:  repeat(2, 2fr);
+   grid-template-rows: (2, 50%);
+   margin: 4rem;
+   margin-top: 1rem;
+   
+   
+   
+    
+    
+   
+    
+}
+
+.item{
+    
+    border-radius: 10px;
+    
+    
+}
+.item :hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+}
+
+
+.item img{
+    max-width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0 ;
+    transition: all .5s;
+    align-content: center;
+    justify-content: center;
+    
+   
+}
+
+.item figure{
+    overflow: hidden;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    
+    
+}
+
+.item :hover img{
+    transform: scale(1.2);
+}
+
+.info-producto{
+    padding: 10px 20px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 5px;
+    background-color: white;
+    margin: 5px;
+  
+   
+}
+h2{
+    color: black;
+}
+p{
+    color: black;
+}
+.precio{
+   
+    font-size: 20px;
+    font-weight:  800;
+
+}
+
+
+.info-producto button{
+    border: none;
+    background: none;
+    background-color: black;
+    color: white;
+   padding: 10px 15px;
+    cursor: pointer;
+    
+}
+    
+    footer{
+        margin-top: 3rem;
+        text-align: center;
+        color: whitesmoke;
+    }
+    
+    
+    
+  @media screen and (min-width:320px){
+    
+    .container-items{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+  }
+
+  @media screen and (min-width:600px) {
+    .container-items{
+        grid-template-columns:  repeat(2, 1fr);
+        grid-template-rows: repeat(2,50%);
+      background-color: black;
+    }
+}
+  @media screen and (min-width:1024px) {
+    .container-items{
+        grid-template-columns: repeat(2,1fr);
+        background-color: gray;
+    }
+    
+  }
+
+    
+
+    
